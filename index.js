@@ -1,4 +1,5 @@
 "use strict";
+const fs = require("fs");
 
 // Encoding Base64 Strings with Node.js
 
@@ -22,4 +23,24 @@ const decode = (str) => {
   return text;
 };
 
-module.exports = { encode, decode };
+// Encoding Binary Data to Base64 Strings
+
+const encodeBinary = (path) => {
+  let buff = fs.readFileSync(path);
+  let base64data = buff.toString("base64");
+
+  console.log("File converted to base64 is:\n\n" + base64data);
+};
+
+// Decoding Base64 Strings to Binary Data
+
+const decodeBinary = (data) => {
+  let data = data;
+
+  let buff = Buffer.from(data, "base64");
+  fs.writeFileSync("stack-abuse-logo-out.png", buff);
+
+  console.log("Base64 data converted to file");
+};
+
+module.exports = { encode, decode, encodeBinary, decodeBinary };
