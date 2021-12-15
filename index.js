@@ -34,11 +34,11 @@ const encodeBinary = (path) => {
 
 // Decoding Base64 Strings to Binary Data
 
-const decodeBinary = (data) => {
+const decodeBinary = (data, fileName) => {
   let data = data;
 
   let buff = Buffer.from(data, "base64");
-  fs.writeFileSync("stack-abuse-logo-out.png", buff);
+  fs.writeFileSync(fileName, buff);
 
   console.log("Base64 data converted to file");
 };
