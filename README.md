@@ -8,10 +8,10 @@ xcoding is a Node.js package for dealing with types of data and files
 npm i xcoding
 ```
 
-## Usage
+## Example
 
 ```javascript
-const {decode, encode, decodeBinary, encodeBinary} = require('xcoding');
+const {decode, encode} = require('xcoding');
 
 // Encoding Base64 Strings
 
