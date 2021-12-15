@@ -1,7 +1,7 @@
 "use strict";
 const fs = require("fs");
 
-// Encoding Base64 Strings with Node.js
+// Encoding Base64 Strings
 
 const encode = (str) => {
   let data = str;
@@ -12,7 +12,7 @@ const encode = (str) => {
   return base64data;
 };
 
-// Decoding Base64 Strings with Node.js
+// Decoding Base64 Strings
 
 const decode = (str) => {
   let data = str;
